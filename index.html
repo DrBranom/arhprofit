@@ -98,10 +98,24 @@
         </section>
         <!-- Здесь будет форма -->
         <form action="https://echo.htmlacademy.ru" class="appointment-form" metod="post">
-            <input type="text" name="date" value="" placeholder="08.10.2017">
-            <input type="text" name="time" value="" placeholder="10:00">
-            <input type="text" name="name" value="" placeholder="Борода">
-            <input type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+
+            <p class="appointment-item">
+                <label for="appointment-date">Дата</label>
+                <input type="text" id="appointment-date" name="date" value="" placeholder="08.10.2017">
+            </p>
+            <p class="appointment-item">
+                <label for="appointment-time">Время</label>
+                <input type="text" id="appointment-time" name="time" value="" placeholder="10:00">
+            </p>
+            <p class="appointment-item">
+                <label for="appointment-name">Ваше имя</label>
+                <input type="text" id="appointment-name" name="name" value="" placeholder="Борода">
+            </p>
+            <p class="appointment-item">
+                <label for="appointment-phone">Телефон</label>
+                <input type="tel" id="appointment-phone" name="phone" value="" placeholder="+7 123 456-78-90">
+            </p>
+            <button class="button" type="submit">Отправить</button>
         </form>
 
     </main>
@@ -130,14 +144,41 @@
             <a href="https://htmlacademy.ru" class="button">HTML Academy</a>
         </p>
     </footer>
+
+    <!-- Попаа - форма входа на сайт - поставить на все страницы, где есть вход -->
     <section class="modal modal-login">
         <h2>Личный кабинет</h2>
         <p>Введите свой логин и пароль</p>
-        <span class="modal-close">x</span>
+        <form action="https://echo.htmlacademy.ru" class="login-form" method="post">
+            <p>
+                <label for="user-login" class="visually-hidden">Логин</label>
+                <input type="text" id="user-login" class="login-icon-user" name="login" placeholder="Логин">
+            </p>
+            <p>
+                <label for="user-password" class="visually-hidden">Пароль</label>
+                <input type="password" id=="user-password" class="login-icon-password" name="password" placeholder="Пароль">
+            </p>
+
+            <p class="login-password-info">
+                <label for="login-password-info"></label>
+                <input type="chekbox" class="visually-hidden" name="remember" id="login-password-info"> Запомните меня</label>
+                <span class="checkbox-indicator"></span>
+                <a href="#" class="restore">Я забыл пароль!</a>
+            </p>
+            <button class="button" type="submit">Войти</button>
+        </form>
+
+        <button class="modal-close" type="button">Закрыть</button>
+
     </section>
+
+    <!-- Модальное окно  - КАРТА -->
     <section class="modal modal-map">
         <h2 class="visualy-hidden">Как до нас добраться</h2>
-        <span class="modal-close">x</span>
+        <p>
+            <img src="img/map.jpg" alt="Офис компании по адресу ул.Большая Конюшенная 19/8, САНКТ-ПЕТЕРБУРГ">
+        </p>
+        <button class="modal-close" type="button">Закрыть</button>
     </section>
 </body>
 
